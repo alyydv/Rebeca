@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer casar comigo?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #no {
+            position: absolute;
+        }
+    </style>
+    <script>
+        function moveButton() {
+            const button = document.getElementById('no');
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Você quer casar comigo?</h1>
+    <button id="yes" onclick="alert('Eu sabia que você diria sim!')">Sim</button>
+    <button id="no" onclick="alert('Não pode ser clicado!')" onmouseover="moveButton()">Não</button>
+</body>
+</html>
